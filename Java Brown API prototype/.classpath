@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" path="src"/>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry kind="lib" path="/home/tusharb1995/Desktop/Brown University/Hack@Brown 2015/Resources/org.json-20120521.jar"/>
+	<classpathentry kind="lib" path="/home/tusharb1995/Desktop/Brown University/Hack@Brown 2015/Resources/unirest-java-1.4.4.jar"/>
+	<classpathentry kind="lib" path="/home/tusharb1995/Desktop/Brown University/Hack@Brown 2015/Resources/httpcomponents-client-4.4/lib/httpclient-4.4.jar"/>
+	<classpathentry kind="lib" path="/home/tusharb1995/Desktop/Brown University/Hack@Brown 2015/Resources/httpcomponents-client-4.4/lib/httpmime-4.4.jar"/>
+	<classpathentry kind="lib" path="/home/tusharb1995/Desktop/Brown University/Hack@Brown 2015/Resources/httpcomponents-client-4.4/lib/commons-codec-1.9.jar"/>
+	<classpathentry kind="lib" path="/home/tusharb1995/Desktop/Brown University/Hack@Brown 2015/Resources/httpcomponents-client-4.4/lib/commons-logging-1.2.jar"/>
+	<classpathentry kind="lib" path="/home/tusharb1995/Desktop/Brown University/Hack@Brown 2015/Resources/httpcomponents-client-4.4/lib/fluent-hc-4.4.jar"/>
+	<classpathentry kind="lib" path="/home/tusharb1995/Desktop/Brown University/Hack@Brown 2015/Resources/httpcomponents-client-4.4/lib/httpclient-cache-4.4.jar"/>
+	<classpathentry kind="lib" path="/home/tusharb1995/Desktop/Brown University/Hack@Brown 2015/Resources/httpcomponents-client-4.4/lib/httpclient-win-4.4.jar"/>
+	<classpathentry kind="lib" path="/home/tusharb1995/Desktop/Brown University/Hack@Brown 2015/Resources/httpcomponents-client-4.4/lib/httpcore-4.4.jar"/>
+	<classpathentry kind="lib" path="/home/tusharb1995/Desktop/Brown University/Hack@Brown 2015/Resources/httpcomponents-client-4.4/lib/jna-4.1.0.jar"/>
+	<classpathentry kind="lib" path="/home/tusharb1995/Desktop/Brown University/Hack@Brown 2015/Resources/httpcomponents-client-4.4/lib/jna-platform-4.1.0.jar"/>
+	<classpathentry kind="lib" path="/home/tusharb1995/Desktop/Brown University/Hack@Brown 2015/Resources/httpcore-nio-4.0-alpha6.jar"/>
+	<classpathentry kind="output" path="bin"/>
+</classpath>
