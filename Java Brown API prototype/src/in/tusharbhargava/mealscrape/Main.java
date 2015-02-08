@@ -5,6 +5,7 @@ import java.io.IOException;
 import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.net.URISyntaxException;
+import java.util.ArrayList;
 import java.util.List;
 
 import org.apache.http.HttpResponse;
@@ -14,19 +15,18 @@ import org.apache.http.client.methods.HttpGet;
 import org.apache.http.client.utils.URIBuilder;
 import org.apache.http.impl.client.DefaultHttpClient;
 
-import com.mashape.unirest.http.exceptions.UnirestException;
+
 
 public class Main {
 
 	/**
 	 * @param args
-	 * Unirests. 
 	 * GSON 
 	 * @throws IOException 
 	 * @throws UnirestException 
 	 * @throws URISyntaxException 
 	 */
-	public static void main(String[] args) throws IOException, UnirestException, URISyntaxException {
+	public static void main(String[] args) throws IOException, URISyntaxException {
 //		System.out.println("Hurray: ");
 //		ArrayList<String> queries=new ArrayList<String>();
 //		queries.add("Ratty");
@@ -50,11 +50,17 @@ public class Main {
 		InputStream ir=response.getEntity().getContent();
 		InputStreamReader irReader=new InputStreamReader(ir);
 		BufferedReader br=new BufferedReader(irReader);
+		List<String> dataList = new ArrayList<String>();
+		List<char[]> testCharList = new ArrayList<char[]>();
 		String s="Tushar";
-		while(s!=null) {
-			s=br.readLine();
-			System.out.println(s);
+		while((s=br.readLine())!=null) {
+			dataList.add(s);
+			s = br.readLine();
 		}
+		for (String str: dataList) {
+			System.out.println("MEALS:" + str);
+		}
+		new StringFormatting(dataList);
 		
 		ir.close();
 	}
