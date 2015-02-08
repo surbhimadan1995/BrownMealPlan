@@ -1,6 +1,7 @@
 package in.tusharbhargava.mealscrape;
 
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
 
 public class StringFormatting {
@@ -8,6 +9,9 @@ public class StringFormatting {
 	private List<String> _stringList = null;
 	private List<String[]> _listOfStringArrays = new ArrayList<String[]>();
 	private List<String[]> _soups = new ArrayList<String[]>();
+	private List<String[]> _proteinList = new ArrayList<String[]>();
+	private List<String> _hashProteinList = new ArrayList<String>();
+	private HashMap<String, List<String>> categoryMap = new HashMap<String, List<String>>();
 	
 	public StringFormatting(List<String> stringsList) {
 		_stringList = stringsList;
@@ -38,6 +42,10 @@ public class StringFormatting {
 				if (s.equals("soup")) {
 					_soups.add(array);
 				}
+				if(s.equals("chicken") || s.equals("cheese") || s.equals("pork")) {
+					_proteinList.add(array);
+				}
+				
 			}
 		}
 		String s = "";
@@ -50,6 +58,18 @@ public class StringFormatting {
 				
 			}
 		}
+		
+		String prt = "";
+		for(String[] array: _proteinList) {
+			for(String protein: array) {
+				if(!protein.equals("")) {
+					prt+=(protein+" ");
+				}
+			}
+			_hashProteinList.add(prt);
+			categoryMap.put("protein", _hashProteinList);
+		}
+		
 		System.out.println(s);
 		String new_string = "";
 		boolean start = false;
@@ -66,5 +86,11 @@ public class StringFormatting {
 		new_string = new_string.replace("soup & bread station:", "");
 		new_string = new_string.replace("\"", "");
 		System.out.println(new_string);
+		
+		for(String str: categoryMap.get("protein")) {
+			System.out.println("PROTEIN: " + str);
+		}
 	}
+	
+	
 }
